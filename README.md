@@ -27,7 +27,7 @@ Before you can use the RESTaurant API, make sure you have the following prerequi
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/restaurant-api.git
+   git clone https://github.com/your-username/RESTaurant-API.git
    cd restaurant-api
 
 2. Open server.js and edit line 4 to enter your localhost port.
