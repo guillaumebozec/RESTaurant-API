@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "23fd3a3b-d1cf-4266-a928-3a406fdfbe43",
+		"name": "RESTaurant API collection",
+		"description": "This collection allows you to test my RESTaurant API linked to my database.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30596943"
+	},
+	"item": [
+		{
+			"name": "/items requests",
+			"item": [
+				{
+					"name": "Get /items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get /items?parameters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/items?parameters=price>10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"items"
+							],
+							"query": [
+								{
+									"key": "parameters",
+									"value": "price>10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post /items",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Pastas\",\n    \"description\":\"Best italian pastas in France\",\n    \"price\":10.00,\n    \"category_id\":\"11\"\n    //category 11 refers to the category \"Plat\" from the \"Formule Bistrot\" (have a look on the /categories  get request for more details)\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get /items/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/items/71",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"items",
+								"71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update /items/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Pastas\",\n    \"description\":\"Worst italian pastas in France\",\n    \"price\":1000.00,\n    \"category_id\":\"11\"\n    //category 11 refers to the category \"Plat\" from the \"Formule Bistrot\" (have a look on the /categories  get request for more details)\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/items/71",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"items",
+								"71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete /items/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/items/71",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"items",
+								"71"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/categories requests",
+			"item": [
+				{
+					"name": "Get /categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post /categories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_name\":\"Soft\",\n    \"category_description\":\"Voici les softs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get /categories/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/categories/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update /categories/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_name\":\"Hard\",\n    \"category_description\":\"Voici les hard\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete /categories/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/categories/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/formulas requests",
+			"item": [
+				{
+					"name": "Get /formulas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/formulas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formulas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get /formulas?parameters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/formulas?parameters=formula_name=\"Classic\"",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formulas"
+							],
+							"query": [
+								{
+									"key": "parameters",
+									"value": "formula_name=\"Classic\""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post /formulas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"formula_name\":\"Restaurant\",\n    \"formula_description\":\"Plat\",\n    \"formula_price\":\"15.00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/formulas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formulas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get /formulas/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/formulas/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formulas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update /formulas/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"formula_name\":\"Bistrot\",\n    \"formula_description\":\"Boisson\",\n    \"formula_price\":\"12.00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/formulas/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formulas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete /formulas/id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/formulas/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"formulas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
